@@ -4,18 +4,17 @@
 {
  "about":"start",
  "function":"loadImage",
- "expiretimer":10000, 
- "data":{"value":"http://192.168.2.19/static/current.jpg","about":"tela3.jpg"}, 
+ "expiretimer":10000,
+ "data":{"value":"http://192.168.2.19/static/current.jpg","about":"tela3.jpg"},
  "to":"next"
-}, 
+},
 {
  "about":"next",
  "function":"timer",
- "data":{"value":5000},
+ "data":{"value":15000},
  "to":"start"
 }
 
 ]
 
 }
-
