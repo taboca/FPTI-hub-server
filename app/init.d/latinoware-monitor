@@ -28,7 +28,7 @@ case "$1" in
 
     ;;
   stop)
-    exec /usr/local/bin/forever stopall
+    exec /usr/bin/forever stopall
     ;;
   *)
     echo "Usage: /etc/init.d/nodeup {start|stop}"
