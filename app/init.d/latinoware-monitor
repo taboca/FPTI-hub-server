@@ -20,11 +20,11 @@ export HOME=/root
 
 case "$1" in
   start)
-    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/httpserver.json
-    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/twitter-grab.json
-    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi.json
-    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi-hardware.json
-    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi-minicursos.json
+    $FOREVER_PATH/forever -p /home/mgalli/FPTI-hub-server/forever --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/httpserver.json
+    $FOREVER_PATH/forever -p /home/mgalli/FPTI-hub-server/forever --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/twitter-grab.json
+    $FOREVER_PATH/forever -p /home/mgalli/FPTI-hub-server/forever --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi.json
+    $FOREVER_PATH/forever -p /home/mgalli/FPTI-hub-server/forever --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi-hardware.json
+    $FOREVER_PATH/forever -p /home/mgalli/FPTI-hub-server/forever --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi-minicursos.json
 
     ;;
   stop)
