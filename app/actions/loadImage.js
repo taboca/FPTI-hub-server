@@ -35,20 +35,20 @@
  * ***** END LICENSE BLOCK ***** */
 
 var sys = require("sys"),
-    path = require("path"),
+    pathFS = require("path"),
     fs = require("fs")
     url = require("url"),
     http = require("http"),
     out = require('../3rdparty/stdout-2-json/stdout-2-json');
 
-function getAndSaveImage(name, href) {
+function getAndSaveImage(name, href, appPath) {
 
     var host = url.parse(href).host;
     var path = url.parse(href).pathname;
     var options = {
         host: host,
-        port: 80,
-        path: path+"?"+Math.random()
+        port: 8888,
+        path: path
     };
     var request = http.get(options);
     request.on('error', function (e) {
@@ -62,7 +62,7 @@ function getAndSaveImage(name, href) {
           bufferedData+=dataBuffer;
        });
        res.on('end', function () {
-          var filePath = pathFS.join( __dirname, '..', appPath, 'channel', name+'.txt');
+          var filePath = pathFS.join( __dirname, '..', appPath, 'static', name);
 
           fs.writeFile(filePath, bufferedData, 'binary', function(err){
             if (err) {
@@ -79,4 +79,4 @@ function getAndSaveImage(name, href) {
 
 /* Remember to clear the timeouts */
 timer = setTimeout(function () { out.send({'result':'expired'}) },15000);
-getAndSaveImage(process.argv[2], process.argv[3]);
+getAndSaveImage(process.argv[2], process.argv[3], process.argv[4]);
