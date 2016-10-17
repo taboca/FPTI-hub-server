@@ -5,7 +5,7 @@
  "about":"start",
  "function":"loadImage",
  "expiretimer":10000,
- "data":{"value":"http://192.168.2.19/static/current.jpg","about":"tela3.jpg"},
+ "data":{"value":"http://tela3/static/current.jpg","about":"tela3.jpg"},
  "to":"next"
 },
 {
