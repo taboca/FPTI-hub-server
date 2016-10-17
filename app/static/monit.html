@@ -1,59 +1,66 @@
 <html>
     <head>
-<meta http-equiv="refresh" content="60">
-          <style>
-              div.panel { color:white; margin-top:0px;background-color:; width:230px; height:130px; display:inline-block; margin:0px; overflow:hidden;} 
+      <meta http-equiv="refresh" content="60">
+      <style>
+        div.panel { color:white; margin-top:0px;background-color:; width:430px; height:230px; display:inline-block; margin:0px; overflow:hidden;}
+        .img { width:430px; height:310px; transform:;transform-origin:0% 100%}
+        body { background:black}
+      </style>
 
-          
-  	.img { width:230px; height:110px; } 
-              body { background:black} 
-          </style>
-
-	<script src="vendor/jquery-min.js"></script>
-        <script type="text/javascript" src="lib/choreographer.js"></script>
+	       <script src="t8l/jquery-min.js"></script>
+        <script type="text/javascript" src="t8l/choreographer.js"></script>
         <script type="text/javascript" src="zoom.js"></script>
         <script>
 
-        function start() { 
+        function start() {
             setTimeout('start()',40000);
         }
 
-	$(document).ready(function() {
+        $(document).ready(function() {
 
-		register("/main/slot1", "target1", "./monit/index.html?url=http://172.25.59.101:8888/static/mini.jpg", iframeTemplate);
-		register("/main/slot2", "target2", "./monit/index.html?url=http://172.25.59.102:8888/static/mini.jpg", iframeTemplate);
-		register("/main/slot3", "target3", "./monit/index.html?url=http://172.25.59.103:8888/static/mini.jpg", iframeTemplate);
-		register("/main/slot4", "target4", "./monit/index.html?url=http://172.25.59.104:8888/static/mini.jpg", iframeTemplate);
-		register("/main/slot5", "target5", "./monit/index.html?url=http://172.25.59.105:8888/static/mini.jpg", iframeTemplate);
-		compile();
-	});
+          // Use the right IPs
+        	register("/main/slot1", "target1", "./monit/index.html?url=http://localhost:8888/static/tela3.jpg", iframeTemplate);
+        	register("/main/slot2", "target2", "./monit/index.html?url=http://localhost:8888/static/tela3.jpg", iframeTemplate);
+        	register("/main/slot3", "target3", "./monit/index.html?url=http://localhost:8888/static/tela3.jpg", iframeTemplate);
+        	register("/main/slot4", "target4", "./monit/index.html?url=http://localhost:8888/static/tela3.jpg", iframeTemplate);
+        	register("/main/slot5", "target5", "./monit/index.html?url=http://localhost:8888/static/tela3.jpg", iframeTemplate);
+        	compile();
+        });
 
         </script>
-   </head>
-        <body id='main' onload="start()">
+  </head>
 
-        <div id='slide0' style='width:1280px;height:720px; overflow:hidden; text-align:center'>
+  <body id='main' onload="start()">
 
-    <div class='panel' id='slide'>
+    <div id='slide0' style=''>
+
+        <div class='panel' id='slide'>
         <div>Bloco 02: 101 </div>
-	<div id='slot1' class='img' ></div>
-    </div>
-    <div class='panel' id='slid'>
+        <div id='slot1' class='img' ></div>
+        </div>
+
+        <div class='panel' id='slid'>
         <div>Bloco 03: 102</div>
-	<div id='slot2' class='img' ></div>
-    </div>
-    <div class='panel' id='slid'>
+        <div id='slot2' class='img' ></div>
+        </div>
+
+        <div class='panel' id='slid'>
         <div>Bloco 05: 103</div>
-	<div id='slot3' class='img' ></div>
-    </div>
-    <div class='panel' id='slide4'>
+        <div id='slot3' class='img' ></div>
+        </div>
+
+        <div class='panel' id='slide4'>
         <div>Bloco 06: 104</div>
-	<div id='slot4' class='img' ></div>
-    </div>
-    <div class='panel' id='slide5'>
+        <div id='slot4' class='img' ></div>
+        </div>
+
+        <div class='panel' id='slide5'>
         <div>Bloco 07: 105</div>
-	<div id='slot5' class='img' ></div>
+        <div id='slot5' class='img' ></div>
+        </div>
+
     </div>
 
-    </body>
+  </body>
+
 </html>

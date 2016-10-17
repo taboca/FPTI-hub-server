@@ -11,7 +11,7 @@
 {
  "about":"next",
  "function":"timer",
- "data":{"value":100000},
+ "data":{"value":5000},
  "to":"start"
 }
 
