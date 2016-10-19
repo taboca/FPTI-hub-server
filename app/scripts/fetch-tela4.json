@@ -5,7 +5,7 @@
  "about":"start",
  "function":"loadImage",
  "expiretimer":10000,
- "data":{"value":"http://tela3:8888/static/current.jpg","about":"tela4.jpg"},
+ "data":{"value":"http://tela4:8888/static/current.jpg","about":"tela4.jpg"},
  "to":"next"
 },
 {
