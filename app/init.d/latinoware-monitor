@@ -21,7 +21,11 @@ export HOME=/home/mgalli/FPTI-hub-server/forever
 case "$1" in
   start)
     $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/httpserver.json
+    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/fetch-tela1.json
+    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/fetch-tela2.json
     $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/fetch-tela3.json
+    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/fetch-tela4.json
+    $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/fetch-tela5.json
     $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi.json
     $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi-hardware.json
     $FOREVER_PATH/forever -p $FOREVER_LOG_PATH --sourceDir=$MEDIATOR_HOME start mediator.js app ./scripts/lapsi-minicursos.json
