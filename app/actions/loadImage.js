@@ -75,6 +75,9 @@ function getAndSaveImage(name, href, appPath) {
        });
        res.on('end', function () {
           var filePath = pathFS.join( __dirname, '..', appPath, 'static', name);
+          var d = new Date();
+          var n = d.getTime();
+          var filePathLog = pathFS.join( __dirname, '..', appPath, 'static', 'log'+n+'_'+name );
 
           fs.writeFile(filePath, bufferedData, 'binary', function(err){
             if (err) {
@@ -85,6 +88,19 @@ function getAndSaveImage(name, href, appPath) {
             out.send({'result':'note','data':'file saved: ./channel/'+name});
             out.send({'result':'ok'});
           });
+
+          fs.writeFile(filePath, bufferedData, 'binary', function(err){
+            if (err) {
+              out.senderr({'result':'error','data':err} );
+              throw err;
+            }
+            clearTimeout(timer);
+            out.send({'result':'note','data':'file saved: ./channel/'+name});
+            out.send({'result':'ok'});
+          });
+
+
+
        });
     });
 }
